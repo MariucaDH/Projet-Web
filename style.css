@@ -3,8 +3,3 @@ body
     background-image: url("fond3.jpeg");
     background-attachment: fixed;
 }
-
-h1
-{
-    border: 3px blue dashed;
-}
