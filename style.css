@@ -1,16 +1,67 @@
-body {
-    background-color: powderblue;
-}
-#boutons
+body 
 {
-    background-color: lightsteelblue;
-					height:100%;
-					width: 200px;
-                float : left;
-    
+    background-color: powderblue;
+    width: 100%; 
+    font-family: sans-serif; 
+    letter-spacing: 1px; 
+    color: darkblue
 }
 
-#boutonaccueil
+/**STYLE DE BOUTONS **/
+
+footer 
 {
-    height: 200px;
+    bottom: 0px; 
+    position: absolute; 
 }
+a:link
+{
+    text-decoration: none; 
+    text-decoration-color: darkblue; 
+    color: darkblue; 
+}
+
+#boutons
+{
+    z-index: 1; 
+    background-color: lightsteelblue;
+    height:100%;
+    width: 200px;
+    float : left;
+    text-align: center;
+    left: 0px;   
+    position: absolute;
+    top: 0px; 
+}
+#boutondeco
+{
+    
+    background-color: white;
+    color: cadetblue;
+    width: 150px;
+    height: 40px; 
+    text-align: center; 
+    margin-left: 20px; 
+    margin-top: 30px; 
+    font-family:sans-serif; 
+    letter-spacing: 1px; 
+    line-height: 40px;
+    text-decoration: none; 
+    margin-top: 300px;
+    
+}
+#bouton
+{
+    background-color: white;
+    color: cadetblue;
+    width: 150px;
+    height: 40px; 
+    text-align: center; 
+    margin-left: 20px; 
+    margin-top: 30px; 
+    font-family:sans-serif; 
+    letter-spacing: 1px; 
+    line-height: 40px;
+    text-decoration: none; 
+}
+
