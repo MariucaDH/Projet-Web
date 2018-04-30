@@ -1,5 +1,16 @@
-body
+body {
+    background-color: powderblue;
+}
+#boutons
 {
-    background-image: url("fond3.jpeg");
-    background-attachment: fixed;
+    background-color: lightsteelblue;
+					height:100%;
+					width: 200px;
+                float : left;
+    
+}
+
+#boutonaccueil
+{
+    height: 200px;
 }
