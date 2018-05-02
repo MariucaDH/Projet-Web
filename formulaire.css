@@ -1,6 +1,12 @@
 body {
-    background-color: powderblue;
+    background-image: url(fondco.png);
+    font-family: sans-serif; 
+    letter-spacing: 1px; 
+    margin: 0;
+    
 }
+
+
 
 #pseudo {
     
@@ -14,4 +20,70 @@ body {
 
 #bouton {
      float align-content: center;   
+}
+
+#connexion 
+{
+    
+float: right; 
+width: 600px;
+}
+
+#inscription 
+{
+    
+    margin-top: 220px;
+     margin-left: 500px;  
+    margin-right: 500px; 
+    margin-bottom: 180px;
+    background-color: cadetblue; 
+    padding-left: 30px; 
+    padding-right: 30px; 
+    padding-bottom: 50px; 
+    padding-top: 30px;
+       
+    border: solid darkcyan; 
+     
+   
+    
+}
+
+#inscr
+{
+    float: right;
+}
+#haut
+{
+    top: 0px;
+    background-color: white;
+    height: 50px;
+     
+}
+#logo
+{
+    float: left;
+    margin-left: 20px;
+margin-top: 4px;    
+}
+
+#bienvenue
+{
+    float: right; 
+    margin-right: 30px;
+    font-size: 30px;
+    line-height: 50px; 
+    color: darkcyan; 
+    font-family:sans-serif;
+    letter-spacing: 2px; 
+    
+}
+
+footer 
+{
+    padding-top: 20px;
+    letter-spacing: 3px;
+    font-size: 13px;
+    text-align: center;
+    padding-bottom: 20px; 
+background-color: white
 }

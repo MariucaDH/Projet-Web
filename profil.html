@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="4.css">
+	
+    <link rel="stylesheet" type="text/css" href="profil.css">
     <link rel="stylesheet" href="style.css" />
 	<title>Profil</title>
 
@@ -10,36 +11,38 @@
 <body>
 
 
-	    <div id = "boutons"> 
+    <div id = "boutons"> 
         <div id ="bouton"> <a href="accueil.html"> Accueil</a> </div>
         <div id="bouton">  <a href="reseau.html">Réseau</a> </div>
         <div id="bouton"> Mon profil </div>
         <div id="bouton"> <a href="messagerie.html"> Messagerie </a></div>
         <div id="bouton">  <a href="notifications.html"> Notifications </a> </div>
         <div id="bouton"> <a href="emplois.html">Emplois </a> </div>  
-            <div id="boutondeco" > <a href="formulaire.html"> Deconnexion </a></div>
+        <div id="boutondeco" > <a href="formulaire.html"> Deconnexion </a></div>
     </div>
 
-
+<div class="profil">
 
 	<h1>Mon Profil</h1>
 
 
-	<div id="infoPerso">
-	<img class="moi" src="moi.jpg" alt="moi" width="20" height="20%">
-	<ul>
+    <div id="imgperso">
+	<img class="moi" src="accueil2.png" alt="moi" width="200px" height="200px">
+        </div>
+	<nav id="infosperso">
+        <ul>
 			<li>nom</li>
 			<li>prenom</li>
 			<li>age</li>
 			<li>email</li>
 			<li>tel</li>
-			<li>adresse</li>li>
+			<li>adresse</li>
 		</ul>
-	</div>
+	</nav>
 
-	
+<div id="infos">
 	<div id="etudes">
-	<h2>Etudes</h2>
+	<h4>Etudes</h4>
 	<p>
 	ici acceder aux etudes de l'utilisateur via bdd
 	</p>
@@ -47,7 +50,7 @@
 	</div>
 <hr/>
 	<div id="Experiences professionnelles">
-	<h2>Experiences professionnelles</h2>
+	<h4>Experiences professionnelles</h4>
 	<p>
 	ici acceder aux exp de l'utilisateur via bdd
 	</p>
@@ -55,20 +58,24 @@
 	</div>
 <hr/>
 	<div id="competences">
-	<h2>Competences</h2>
+	<h4>Competences</h4>
 	<p>
 	ici acceder aux competences de l'utilisateur via bdd
 	</p>
 	<footer>cliquez ici pour ajouter un nouveau champ</footer>
 	</div>
 <hr/>
-	<div id="Experiences autre">
-	<h2>Exp diverses</h2>
+	<div id="Expdiv">
+	<h4>Expériences diverses</h4>
 	<p>
 	ici acceder aux autres exp de l'utilisateur via bdd
 	</p>
 	<footer>cliquez ici pour ajouter un nouveau champ</footer>
 	</div>
-
+    </div>
+</div>
 </body>
+        <footer>
+    <p> Mariuca DE HILLERIN - Nicolas CHOLLET - Sophie-Anne CORDONNIER - Projet piscine ECE Social Network - Mai 2018 </p>
+    </footer>
 </html>

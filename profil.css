@@ -1,0 +1,28 @@
+.profil 
+{
+    margin-left: 220px; 
+    
+}
+
+#infosperso 
+{
+    float: right;
+    margin-right: 100px;
+    width: 400px;
+    
+}
+
+#imgperso
+{
+    
+    float: left;
+    width: 200px; 
+    height: 200px; 
+    
+}
+
+#infos
+{
+    margin-top: 300px;
+    
+}
