@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body 
 {
     background-color: ghostwhite;
@@ -26,12 +27,15 @@ a:link
     text-decoration: none; 
     text-decoration-color: darkblue; 
     color: darkblue; 
+=======
+body {
+    background-color: powderblue;
+>>>>>>> 60613bea13c9e6cbb4c2759cfb170bc129cd7fbc
 }
-
 #boutons
 {
-    z-index: 1; 
     background-color: lightsteelblue;
+<<<<<<< HEAD
     height:2000px;
     width: 200px;
     float : left;
@@ -54,23 +58,20 @@ a:link
     line-height: 40px;
     text-decoration: none; 
     margin-top: 35px;
+=======
+					height:100%;
+					width: 200px;
+                float : left;
+>>>>>>> 60613bea13c9e6cbb4c2759cfb170bc129cd7fbc
     
 }
-#bouton
+
+#boutonaccueil
 {
-    background-color: white;
-    color: cadetblue;
-    width: 150px;
-    height: 40px; 
-    text-align: center; 
-    margin-left: 20px; 
-    margin-top: 30px; 
-    font-family:sans-serif; 
-    letter-spacing: 1px; 
-    line-height: 40px;
-    text-decoration: none; 
+    height: 200px;
 }
 
+<<<<<<< HEAD
 #imgacc
 {
     margin-top: 30px; 
@@ -82,3 +83,8 @@ a:link
     margin-top: 20px; 
     width: 180px;
 }
+=======
+#type {
+    float align-content: center;  
+}
+>>>>>>> 60613bea13c9e6cbb4c2759cfb170bc129cd7fbc
