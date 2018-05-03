@@ -1,7 +1,7 @@
 
 body 
 {
-    background-color: white;
+    background-image: url("242.jpg");
     width: 100%; 
     font-family: sans-serif; 
     letter-spacing: 1px; 
@@ -28,7 +28,6 @@ a:link
     text-decoration-color: darkblue; 
     color: darkblue; 
 }
-
     
 #boutons
 {
@@ -42,6 +41,7 @@ a:link
     position: absolute;
     top: 0px; 
 }
+
 #boutondeco
 {
     background-color: white;
@@ -57,28 +57,20 @@ a:link
     margin-top: 260px;
 }
 
+#boutonpartage
+{
+    background-color: white;
+    text-align: center; 
+    font-family:sans-serif; 
+    letter-spacing: 1px; 
+    border: solid 3px lightsteelblue;
+    margin-right: 150px;
+}
+
 #boutonaccueil
 {
     height: 200px;
 }
-
-#imgacc
-{
-    margin-top: 30px; 
-}
-
-#txtacc
-{
-    text-align: center;
-    margin-top: 20px; 
-    width: 180px;
-}
-
-#type {
-    float align-content: center;  
-}
-
-
 
 #bouton
 {
