@@ -24,18 +24,19 @@ body {
 
 #connexion 
 {
-    
+    font-size: 20px;
+    margin-top: 10px;
 float: right; 
-width: 600px;
+width: 650px;
 }
 
 #inscription 
 {
     
-    margin-top: 220px;
+    margin-top: 140px;
      margin-left: 500px;  
     margin-right: 500px; 
-    margin-bottom: 180px;
+    margin-bottom: 100px;
     background-color: cadetblue; 
     padding-left: 30px; 
     padding-right: 30px; 
@@ -46,6 +47,18 @@ width: 600px;
      
    
     
+}
+
+#echec 
+{
+    background-color: whitesmoke;
+    border: solid 2px darkcyan;
+    text-align: center;
+    margin-left: 550px; 
+    margin-right: 550px;
+     padding-bottom: 30px; 
+    padding-top: 30px;
+    margin-bottom: 75px;
 }
 
 #inscr
