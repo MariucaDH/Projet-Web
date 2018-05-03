@@ -38,7 +38,7 @@
                                 try
                     {
                         // On se connecte à MySQL
-                        $bdd = new PDO('mysql:host=localhost;dbname=excepert;charset=utf8', 'root','');
+                        $bdd_connexion = new PDO('mysql:host=localhost;dbname=excepert;charset=utf8', 'root','root');
                     }
                     catch(Exception $e)
                     {
@@ -46,7 +46,7 @@
                             die('Erreur : '.$e->getMessage());
                     }
             //on selectionne le user correspondant a l email
-                    $reponse = $bdd->query('SELECT * FROM user WHERE pseudo_user=\'' . $_GET['pseudo'] . '\'');
+                    $reponse = $bdd_connexion->query('SELECT * FROM user WHERE pseudo_user=\'' . $_GET['pseudo'] . '\'');
                     $donnees = $reponse->fetch();
             //on verifie que le mot de passe correspond 
                     if ($donnees['password_user']==$_GET['password'])
@@ -135,33 +135,18 @@
                                 try
                     {
                         // On se connecte à MySQL
-                        $bdd = new PDO('mysql:host=localhost;dbname=excepert;charset=utf8', 'root','');
+                        $bdd_inscription = new PDO('mysql:host=localhost;dbname=excepert;charset=utf8', 'root','root');
                     }
                     catch(Exception $e)
                     {
                         // En cas d'erreur, on affiche un message et on arrête tout
                             die('Erreur : '.$e->getMessage());
                     }
-            /*/on selectionne le user correspondant a l email
-                    $reponse = $bdd->query('SELECT * FROM user WHERE pseudo_user=\'' . $_GET['pseudo'] . '\'');
-                    $donnees = $reponse->fetch();
-            //on verifie que le mot de passe correspond 
-                    if ($donnees['password_user']==$_GET['password'])
-                    {
-                        $_SESSION['id_user'] = $donnees['id_user'];
-                        $_SESSION['name_user'] = $donnees['name_user'];
-                        $_SESSION['prenom_user'] = $donnees['prenom_user'];
-                        $_SESSION['pseudo_user'] = $donnees['pseudo_user'];
-                        $_SESSION['tel_user'] = $donnees['tel_user'];
-                        $_SESSION['age_user'] = $donnees['age_user'];
-                        $_SESSION['sexe_user'] = $donnees['sexe_user'];
-                        $_SESSION['mail_user'] = $donnees['mail_user'];
-                        $_SESSION['current_status_user'] = $donnees['current_status_user'];
+            // On ajoute une entrée dans la table user
+            $bdd_inscription->exec('INSERT INTO user (id_user,name_user, prenom_user, pseudo_user, password_user, tel_user, age_user,photo_user,sexe_user,mail_user,current_status_user,bio_user) VALUES(2,\'cordonier\', \'Patrick\', \'pat\',\'yo\', 0660912718, 22 ,1,\'male\',\'wahou@hotmailfr \',\'raaa\',\'jpp\')');
 
-                        header('Location: accueil.php');
-
-                        exit();*/
-                    }
+            echo '<strong>L\'utilisateur a bien été ajouté !, vous pouvez maintenant vous connecter<strong>';
+        }
         else
         {
             echo '<script>alert("Vous n\'avez pas rempli tout les champs du formulaire, recommencez svp");</script>';
@@ -188,3 +173,4 @@
 </body>
 
 </html>
+<!-- a faire plutard : blinder la saisie dans l inscription pour verifier si le pseudo est deja pris
