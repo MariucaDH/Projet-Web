@@ -1,3 +1,6 @@
+<?php  session_start(); ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,6 +48,37 @@
 		</ul>
 	</nav>
     
+     <?php
+  
+
+        /*  try
+                    {
+                        // On se connecte à MySQL
+                        $bdd = new PDO('mysql:host=localhost;dbname=excepert;charset=utf8', 'root','root');
+                    }
+        catch(Exception $e)
+                    {
+                        // En cas d'erreur, on affiche un message et on arrête tout
+                            die('Erreur : '.$e->getMessage());
+                    }
+            //on selectionne le user correspondant a l email
+                    $reponse = $bdd->query('SELECT * FROM users WHERE id_user =\''.$_SESSION['id_user']'');
+               
+echo '<div id="infosperso">';
+        while($donnees = $reponse->fetch())
+            //on verifie que le mot de passe correspond 
+            
+        {
+           echo 'Age : '.$donnees['age_user'].'<br/>';
+            echo 'E-mail : '. $donnees['mail_user'].'<br/>';  
+            echo 'Situation actuelle : '.$donnees['current_status_user'].'<br/>'; 
+            echo 'Biographie : '.$donnees['bio_user'].'<br/>'; 
+        }
+    
+          echo '</div>';         
+    */
+        ?>
+    
   </div>  
     
     <br/><br/><br/>
@@ -53,28 +87,87 @@
     <div id="exp">
 	     <div id="formation">
 <div id="nom">Formation </div><br/><br/>
-	<div id="contenuf"> 
-           Structure :<br/>
-        Date de début : .... Date de fin : ....<br/>
-        Description : <br/>
-             </div>
+              <?php
+  
+
+          try
+                    {
+                        // On se connecte à MySQL
+                        $bdd = new PDO('mysql:host=localhost;dbname=excepert;charset=utf8', 'root','root');
+                    }
+        catch(Exception $e)
+                    {
+                        // En cas d'erreur, on affiche un message et on arrête tout
+                            die('Erreur : '.$e->getMessage());
+                    }
+            //on selectionne le user correspondant a l email
+                    $reponse = $bdd->query('SELECT * FROM experience WHERE type_exp=\'formation\' AND id_user =\''.$_SESSION['id_user'].'\' ORDER BY \'date_exp\'');
+               
+echo '<div id="contenuf">';
+        while($donnees = $reponse->fetch())
+            //on verifie que le mot de passe correspond 
+            
+        {
+           echo 'Structure : '.$donnees['structure_exp'].'<br/>';
+            echo 'Description : '. $donnees['description_exp'].'<br/>';  
+            echo 'Date de début : '.$donnees['date_exp_begin'].'<br/>'; 
+            echo 'Date de fin : '.$donnees['date_exp_end'].'<br/>'; 
+        }
+          echo '</div>';         
+       
+        
+        ?>
+	
 	
 	</div>
+        
+        
+        
+    </div>
+        
+        
+        
 <br/>
         
 	<div id="expprof">
 	<div id="nom">Expériences professionelles  </div><br/><br/>
-	<div id="contenue">
-        Structure : <br/>
-          Date de début : .... Date de fin : ....<br/>
-        Description : <br/>
+	      <?php
+  
+
+          try
+                    {
+                        // On se connecte à MySQL
+                        $bdd = new PDO('mysql:host=localhost;dbname=excepert;charset=utf8', 'root','root');
+                    }
+        catch(Exception $e)
+                    {
+                        // En cas d'erreur, on affiche un message et on arrête tout
+                            die('Erreur : '.$e->getMessage());
+                    }
+            //on selectionne le user correspondant a l email
+                    $reponse = $bdd->query('SELECT * FROM experience WHERE type_exp=\'experience\' AND id_user =\''.$_SESSION['id_user'].'\' ORDER BY \'date_exp\'');
+               
+echo '<div id="contenue">';
+        while($donnees = $reponse->fetch())
+            //on verifie que le mot de passe correspond 
+            
+        {
+            echo 'Structure : '.$donnees['structure_exp'].'<br/>';
+            echo 'Description : '. $donnees['description_exp'].'<br/>';  
+            echo 'Date de début : '.$donnees['date_exp_begin'].'<br/>'; 
+            echo 'Date de fin : '.$donnees['date_exp_end'].'<br/>'; 
+        }
+          echo '</div>';         
+     
+        
+        ?>
 	</div>
 	
 	
 	</div>
 
     
-    </div>
+    
 
     <br/><br/><br/>
     
@@ -95,7 +188,7 @@
         </form>
     
     </div>
-</div>
+
 </body>
       
 </html>
