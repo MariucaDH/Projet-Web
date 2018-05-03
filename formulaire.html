@@ -9,29 +9,30 @@
 
 <body>
   
-     <div id="haut"> 
-    <nav id="logo"> <img src="logoecenv.png" width="170px" height="40px" /> </nav>
-    <div id="bienvenue"> Bienvenue sur ExCEpert Network </div>
-         
-        </div>
+    <div id="haut"> 
+        <nav id="logo"> <img src="logoecenv.png" width="170px" height="40px" /> </nav>
+        <div id="bienvenue"> Bienvenue sur ExCEpert Network </div>   
+    </div>
+    
+<!-- Connexion--> 
     
 	<div id="connexion">
        
-	<p>
-	
-	<label for="email">E-mail :  </label><input name="email" type="text" id="email" /> &nbsp;
-	<label for="password">Mot de passe : </label><input type="password" name="password" id="password" />
+	   <form method="get" action="formulaire.php">
+            <label for="email">E-mail :  </label><input name="email" type="text" id="email" /> &nbsp;
+            <label for="password">Mot de passe : </label><input type="password" name="password" id="password" />
     
-	<a href="accueil.html"><input type="submit" value="Se connecter" /></a> 
+	        <a href="accueil.html"><input type="submit" value="Se connecter" /></a> 
+	   </form>
+        
+    </div>  
+ <div id="formulaire">  
+<!-- Inscription --> 
     
-	
-</div>  
-  
-
 <div id="inscription"> 
     <center>  <a style="font-size: 30px; letter-spacing: 2px; " >Inscription </a> </center>
     <br/>
-    
+    <form method="post" action="formulaire.php">
     <label for="nom">&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Nom :  </label><input name="nom" type="text" id="nom" placeholder="Ex : Segado" size="30"/><br/><br/>
     
     <label for="prenom">&nbsp;  &nbsp;&nbsp; &nbsp; &nbsp;Prénom :  </label><input name="prenom" type="text" id="prenom" size="30" placeholder="Ex : Jean-Pierre"/><br/>
@@ -45,9 +46,18 @@
     
     <input type="radio" name="sexe" value="Homme" id="homme" /> <label for="homme">Homme</label><br/>
     <br/>
+        </form>
 <div id="inscr"><a href="accueil.html"><input type="submit" value="S'inscrire" /></a> 
 </div>
     
+    </div>
+    
+<!-- Message si le mot de passe est incorrect  --> 
+<div id="echec"> 
+  
+    <!-- insérer le code php   --> 
+    
+</div>
     </div>
     
     <footer>
