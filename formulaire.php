@@ -68,7 +68,7 @@
                     }
                     else
                     {
-                        echo'<div id="echec">';
+                        echo'<div id="echec1">';
                         echo 'Mot de passe ou pseudo incorrect';
                         echo '</div>';
                         //echo '<div id="echec"> Vous avez rempli un mauvais mot de passe ou un mauvais email</div>'; 
@@ -147,8 +147,8 @@
                     }
             // On ajoute une entrée dans la table user
             $bdd_inscription->exec('INSERT INTO user (id_user,name_user, prenom_user, pseudo_user, password_user, tel_user, age_user,photo_user,sexe_user,mail_user,current_status_user,bio_user) VALUES(2,\'cordonier\', \'Patrick\', \'pat\',\'yo\', 0660912718, 22 ,1,\'male\',\'wahou@hotmailfr \',\'raaa\',\'jpp\')');
-            echo '<div id="echec">';
-            echo '<strong>L\'utilisateur a bien été ajouté !, vous pouvez maintenant vous connecter<strong>';
+            echo '<div id="echec2">';
+            echo 'Données correctes. Vous pouvez vous connecter';
             echo'</div>';
         }
         else

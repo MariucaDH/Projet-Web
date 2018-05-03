@@ -1,4 +1,6 @@
+<?php session_start() ?>
 <!DOCTYPE html>
+
 <html> 
     
     <head> 
@@ -8,27 +10,78 @@
     </head>
 
 <body>
-    <center> 
-    <fieldset>
-        
-	<legend>Connexion</legend>
+  
+<div id="haut"> 
+        <nav id="logo"> <img src="logoecenv.png" width="170px" height="40px" /> </nav>
+        <div id="bienvenue"> Bienvenue sur ECExPERT Network </div>   
+</div>
+    
+<!-- Connexion--> 
+    
+<div id="connexion">
        
-        //A LIER AVEC FICHIER PHP
-        //AIDE AVEC OPENCLASSROOM
-	<p>
-	<label for="pseudo">Pseudo :</label><input name="pseudo" type="text" id="pseudo" /><br />
-	<label for="password">Mot de passe :</label><input type="password" name="password" id="password" />
-	</p>
-	</fieldset>
-         
-    <label for="bouton"> </label> 
-	<p> <a href="accueil.html"><input type="submit" value="Connexion" /></a> &nbsp;&nbsp;
-    </p>
-    </center>
-</body>
+       <form  action="formulaire.php" method="GET">
+            <label for="email">Pseudo :  </label><input name="pseudo" type="text" id="pseudo" /> &nbsp;
+            <label for="password">Mot de passe : </label><input type="password" name="password" id="password" />
+    
+            <input type="submit" value="Se connecter" />
+       </form>
+   
+</div>  
+       
+
+  <div id="formulaire">  
+
+
+<!-- Inscription --> 
+    
+<div id="inscription"> 
+
+
+    <center>  <a style="font-size: 30px; letter-spacing: 2px; " >Inscription </a> </center>
+    <br/>
+    <!-- formulaire pour rentrer les donnees--> 
+
+<form method="POST" action="formulaire.php">
+    <label for="pseudo">&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;Pseudo :  </label><input name="pseudo" type="text" id="pseudo" placeholder="Ex : monpseudo42" size="30"/><br/><br/>
+    <label for="nom">&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Nom :  </label><input name="nom" type="text" id="nom" placeholder="Ex : Segado" size="30"/><br/><br/>
+    
+    <label for="prenom">&nbsp;  &nbsp;&nbsp; &nbsp; &nbsp;Prénom :  </label><input name="prenom" type="text" id="prenom" size="30" placeholder="Ex : Jean-Pierre"/><br/>
+    <br/>
+    <label for="mail">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;E-mail : </label><input name="mail" type="text" id="mail" size="30" placeholder="Ex : jean-pierre.segado@edu.ece.fr"/><br/>
+    <br/>
+    <label for="pass">Mot de passe : </label><input type="password" name="pass" id="pass" size="30"/><br/><br/>
+    
+    <label for="tel">&nbsp; &nbsp;&nbsp;Telephone :  </label>  <input type="text" name="tel" id="tel" size="30" placeholder="Ex : 0606100000"/><br/><br/>
+    <label for="age">&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Age :   </label>     <input type="number" name="age" id="age" /><br/><br/>
+    <label for="sexe">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Sexe : </label>
+    <select name=sexe id=sexe>
+        <option value="homme">Homme</option>
+        <option value="femme">Femme</option>
+        <option value="Autre">Autre</option>
+    </select> 
+    <br/> <br/>
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="S'inscrire" />
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Effacer">
+    
+</form>
+    </div>
+    
+  <div id="echec">coucoucoucoucou°°°°°°°°°°0198E?0OUY OYT BOUYTBOUVYTVO87TVO87Tcocucou</div>
+    
+</div>
+    
     
     <footer>
-    <p style="margin-right:200px"> Mariuca DE HILLERIN - Nicolas CHOLLET - Sophie-Anne CORDONNIER - Projet piscine ECExPERTS - Mai 2018 </p>
+ Nicolas CHOLLET - Mariuca DE HILLERIN - Sophie-Anne CORDONNIER   
+        
+        
     </footer>
+    
+    
+   
+</body>
 
 </html>
+<!-- a faire plutard : blinder la saisie dans l inscription pour verifier si le pseudo est deja pris
