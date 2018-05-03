@@ -11,7 +11,7 @@
 <body>
 
 
-    <div id = "boutons"> 
+    <nav id = "boutons"> 
         <div id ="bouton"> <a href="accueil.html"> Accueil</a> </div>
         <div id="bouton">  <a href="reseau.html">Reseau</a> </div>
         <div id="bouton"> Mon profil </div>
@@ -19,44 +19,59 @@
         <div id="bouton">  <a href="notifications.html"> Notifications </a> </div>
         <div id="bouton"> <a href="emplois.html">Emplois </a> </div>  
         <div id="boutondeco" > <a href="formulaire.html"> Deconnexion </a></div>
-    </div>
+    </nav>
 
 <div class="profil">
 
-	<h1>Mon Profil</h1>
+	
 
 
     <div id="imgperso">
-	<img class="moi" src="identite.png" alt="moi" width="100px" height="100px">
-        </div>
+            <!-- Inserer photo du profil de la bdd --> 
+	       <img class="moi" src="identite.png" alt="moi" width="100px" height="100px">
+    </div>
+    <!-- INFOS PERSONNELLES -->
 	<nav id="infosperso">
+        <!-- Inserer la description de la bdd --> 
         <ul>
 			<li>Nom</li>
 			<li>Prenom</li>
-			<li>Age</li>
+            <li>Age</li>
+			<li>Telephone</li>
 			<li>Email</li>
-			<li>Tel</li>
-			<li>Adresse</li>
+			<li>bio</li>
+			<li>Current status</li>
 		</ul>
 	</nav>
-
-<div id="infos">
-	<div id="etudes">
-	<h4>Etudes</h4>
+<!-- CV DU USER  -->
+    
+    <div id="exp">
+	     <div id="formation">
+	           <h4>Formation</h4>
 	<p>
 	Acces aux etudes de l'utilisateur via BDD
 	</p>
-	<footer>Cliquez ici pour ajouter un nouveau champ</footer>
+	
 	</div>
-<hr/>
+
 	<div id="Experiences professionnelles">
 	<h4>Experiences professionnelles</h4>
 	<p>
 	Acces aux experiences de l'utilisateur via BDD
 	</p>
-	<footer>Cliquez ici pour ajouter un nouveau champ</footer>
+	
 	</div>
-<hr/>
+
+    
+    </div>
+
+    <div id="ajouter">
+    <form method="get" action="formulaire.php">
+            <label for="email">E-mail :  </label><input name="email" type="text" id="email" /> &nbsp;
+            <label for="password">Mot de passe : </label><input type="password" name="password" id="password" />
+    
+	        <a href="accueil.html"><input type="submit" value="Se connecter" /></a> 
+	   </form>
     
     </div>
 </div>
