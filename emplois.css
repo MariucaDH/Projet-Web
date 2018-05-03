@@ -1,0 +1,44 @@
+#job
+{
+    z-index: 1; 
+    background-color: lightblue;
+    height:850px;
+    width: 200px;
+    float : left;
+    text-align: center; 
+    position: absolute;
+    top: 100px; 
+    height: 87%; 
+    margin-left: 400px; 
+    position: fixed;
+}
+
+#stage
+{
+    z-index: 1; 
+    background-color: lightblue;
+    height:850px;
+    width: 200px;
+    float : left;
+    text-align: center; 
+    position: absolute;
+    top: 100px; 
+    height: 87%;
+    margin-left: 650px;
+    position: fixed;
+}
+
+#alternance
+{
+    z-index: 1; 
+    background-color: lightblue;
+    height:850px;
+    width: 200px;
+    float : left;
+    text-align: center; 
+    position: absolute;
+    top: 100px; 
+    height: 87%;
+    margin-left: 900px; 
+    position: fixed;
+}

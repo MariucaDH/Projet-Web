@@ -9,7 +9,6 @@
     position: fixed;  
     margin-left:180px;
     float: left;
-    
 }
 
 .nom
@@ -20,8 +19,7 @@
     margin-top: 10px; 
     float: left; 
     margin-left: 230px; 
-    font-size: 15px;
-    
+    font-size: 15px; 
 }
 
 .boutonpub
@@ -38,7 +36,6 @@
 {
    margin-right: 10px; 
     float: right; 
-
 }
 
 .bienvenue
