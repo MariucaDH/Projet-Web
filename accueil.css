@@ -61,11 +61,10 @@ header
     margin-right: 200px; 
 }
 
-
 #messageaccueil
 {
     font-family: sans-serif;
-     margin-top: 10px; 
+    margin-top: 10px; 
     margin-left: 350px; 
 }
 
@@ -91,12 +90,11 @@ header
 #publication
 {
     background-color: white;
-        float: left;
+    float: left;
     
 }
 
 #submit
 {
     float: right; 
-
 }
