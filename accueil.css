@@ -65,15 +65,6 @@ header
     margin-left: 350px; 
 }
 
-#titre
-{
-     font-family: "Arial Black";
-     margin-top: 5px; 
-     margin-left: 90px; 
-     text-align: center;
-     font-size: 16px;
-}
-
 #cote
 {
     float: right; 
