@@ -160,7 +160,7 @@
         ?>
     
 </div>
-    </div>
+    
     
     <footer>
  Nicolas CHOLLET - Mariuca DE HILLERIN - Sophie-Anne CORDONNIER   

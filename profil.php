@@ -89,7 +89,6 @@ echo '<div id="infosperso">';
 <div id="nom">Formation </div><br/><br/>
               <?php
   
-
           try
                     {
                         // On se connecte à MySQL
@@ -108,7 +107,7 @@ echo '<div id="contenuf">';
             //on verifie que le mot de passe correspond 
             
         {
-           echo 'Structure : '.$donnees['structure_exp'].'<br/>';
+           echo '<br/> Structure : '.$donnees['structure_exp'].'<br/>';
             echo 'Description : '. $donnees['description_exp'].'<br/>';  
             echo 'Date de début : '.$donnees['date_exp_begin'].'<br/>'; 
             echo 'Date de fin : '.$donnees['date_exp_end'].'<br/>'; 
@@ -171,24 +170,62 @@ echo '<div id="contenue">';
 
     <br/><br/><br/>
     
-    <div id="ajouter">
+   <div id="ajouter">
         <a> Vous souhaitez ajouter un élément à votre CV ? </a>
         <br/><br/>
-    <form method="get" action="formulaire.php">
+    <form method="post" action="profil.php">
             <label for="struct">Structure :  </label><input name="struct" type="text" id="struct" /> &nbsp;<br/>
-            <label for="sexe">Type : </label>
-    <input type="radio" name="type" value="form" id="form" /> <label for="form"> Formation</label>
-    
-    <input type="radio" name="type" value="exppro" id="exppro" /> <label for="homme">Expérience professionelle</label><br/>
-        <label for="date">Date de début :  </label><input name="date" type="date" id="date" /> &nbsp;<br/>
-        <label for="date">Date de fin :  </label><input name="date" type="date" id="date" /> &nbsp;<br/>
+            <label for="type">Type : </label>
+                    <select name=type id=type>
+                            <option value="formation">Formation</option>
+                            <option value="experience">Experience</option>
+                    </select> 
+            <label for="date">Date de début :  </label><input name="dated" type="date" id="date" /> &nbsp;<br/>
+            <label for="date">Date de fin :  </label><input name="datef" type="date" id="date" /> &nbsp;<br/>
             <label for="description">Description : </label><input type="text" name="description" id="description" /><br/>
     
-	        <a href="accueil.html"><input type="submit" value="Ajouter un élément au CV" /></a> 
-        </form>
+	        <input type="submit" value="Ajouter un élément au CV" />
+    </form>
     
-    </div>
+</div>
+   
+    <?php 
 
+        //on verifie que l'utilisateur a bien entré les differentes entrées du formulaires
+        if(empty($_POST['struct'])) $_POST['struct'] = NULL;
+        if(empty($_POST['type'])) $_POST['type '] = NULL;
+        if(empty($_POST['description'])) $_POST['description'] = NULL;
+        if(empty($_POST['dated'])) $_POST['dated'] = NULL;
+        if(empty($_POST['datef'])) $_POST['datef'] = NULL;  
+   
+     if(isset($_POST['struct']) AND isset($_POST['description']) AND isset($_POST['dated']) AND isset($_POST['datef']) )
+           
+        {
+       //$sx=  $_POST['type '];
+              $s = $_POST['struct'];
+          $d = $_POST['description']; 
+        $dd= $_POST['dated'];
+          $df=   $_POST['datef'];
+            //on ouvre la bdd en verifiant son ouverture
+                                try
+                    {
+           echo 'coucou';
+                                  
+                        // On se connecte à MySQL
+                        $bdd_inscription = new PDO('mysql:host=localhost;dbname=excepert;charset=utf8', 'root','root');
+                    }
+                    catch(Exception $e)
+                    {
+                        // En cas d'erreur, on affiche un message et on arrête tout
+                            die('Erreur : '.$e->getMessage());
+                    }
+            // On ajoute une entrée dans la table user
+            $bdd_inscription->exec('INSERT INTO experience (id_user,structure_exp, description_exp, date_exp_begin, type_exp, date_exp_end,id_exp) VALUES(1,\'eeeeee\',\'cccccc\',2018-01-02, \'formation\', 2018-01-01, 3 )');
+
+            echo 'yesss';
+        }
+     
+      ?>
 </body>
       
 </html>
