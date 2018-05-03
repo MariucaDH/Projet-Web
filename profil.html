@@ -21,10 +21,9 @@
         <div id="boutondeco" > <a href="formulaire.html"> Deconnexion </a></div>
     </nav>
 
-<div class="profil">
-
+<div id="monprofil">
 	
-
+<div id="profil">
 
     <div id="imgperso">
             <!-- Inserer photo du profil de la bdd --> 
@@ -43,40 +42,58 @@
 			<li>Current status</li>
 		</ul>
 	</nav>
+    
+  </div>  
+    
+    <br/><br/><br/>
 <!-- CV DU USER  -->
     
     <div id="exp">
 	     <div id="formation">
-	           <h4>Formation</h4>
-	<p>
-	Acces aux etudes de l'utilisateur via BDD
-	</p>
+<div id="nom">Formation </div><br/><br/>
+	<div id="contenuf"> 
+           Structure :<br/>
+        Date de début : .... Date de fin : ....<br/>
+        Description : <br/>
+             </div>
 	
 	</div>
-
-	<div id="Experiences professionnelles">
-	<h4>Experiences professionnelles</h4>
-	<p>
-	Acces aux experiences de l'utilisateur via BDD
-	</p>
+<br/>
+        
+	<div id="expprof">
+	<div id="nom">Expériences professionelles  </div><br/><br/>
+	<div id="contenue">
+        Structure : <br/>
+          Date de début : .... Date de fin : ....<br/>
+        Description : <br/>
+	</div>
+	
 	
 	</div>
 
     
     </div>
 
-    <div id="ajouter">
-    <form method="get" action="formulaire.php">
-            <label for="email">E-mail :  </label><input name="email" type="text" id="email" /> &nbsp;
-            <label for="password">Mot de passe : </label><input type="password" name="password" id="password" />
+    <br/><br/><br/>
     
-	        <a href="accueil.html"><input type="submit" value="Se connecter" /></a> 
-	   </form>
+    <div id="ajouter">
+        <a> Vous souhaitez ajouter un élément à votre CV ? </a>
+        <br/><br/>
+    <form method="get" action="formulaire.php">
+            <label for="struct">Structure :  </label><input name="struct" type="text" id="struct" /> &nbsp;<br/>
+            <label for="sexe">Type : </label>
+    <input type="radio" name="type" value="form" id="form" /> <label for="form"> Formation</label>
+    
+    <input type="radio" name="type" value="exppro" id="exppro" /> <label for="homme">Expérience professionelle</label><br/>
+        <label for="date">Date de début :  </label><input name="date" type="date" id="date" /> &nbsp;<br/>
+        <label for="date">Date de fin :  </label><input name="date" type="date" id="date" /> &nbsp;<br/>
+            <label for="description">Description : </label><input type="text" name="description" id="description" /><br/>
+    
+	        <a href="accueil.html"><input type="submit" value="Ajouter un élément au CV" /></a> 
+        </form>
     
     </div>
 </div>
 </body>
-        <footer>
-    <p> Mariuca DE HILLERIN - Nicolas CHOLLET - Sophie-Anne CORDONNIER - Projet piscine ECE Social Network - Mai 2018 </p>
-    </footer>
+      
 </html>

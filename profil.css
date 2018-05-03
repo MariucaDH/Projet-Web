@@ -1,28 +1,58 @@
-.profil 
-{
-    margin-left: 220px; 
-    
-}
 
+#monprofil 
+{
+    position: relative;
+    margin-left: 220px;
+}
 #infosperso 
 {
-    float: right;
-    margin-right: 100px;
+    
+    margin-left: 200px; 
     width: 400px;
     
 }
 
 #imgperso
 {
-    
     float: left;
-    width: 200px; 
-    height: 200px; 
+    width: 150px; 
+    height: 150px; 
     
 }
 
-#infos
+#exp
 {
-    margin-top: 300px;
     
+}
+
+#ajouter 
+{
+    position: fixed; 
+    bottom: 40px;
+  text-align: center; 
+    padding-top: 30px; 
+    margin-left: 875px; 
+    margin-right: 30px;  
+   background-color: lightblue; 
+    padding-bottom: 30px; 
+    border: solid 1px darkcyan; 
+}
+
+#contenuf
+{
+    height: 150px; 
+    overflow:auto; 
+    background-color: whitesmoke; 
+}
+#nom  
+{
+    font-size: 20px; 
+}
+
+
+#contenue
+{
+    height: 150px; 
+    overflow: auto; 
+    background-color: whitesmoke;
 }
