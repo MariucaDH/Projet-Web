@@ -27,16 +27,16 @@ body {
     font-size: 20px;
     margin-top: 10px;
 float: right; 
-width: 650px;
+width: 700px;
 }
 
 #inscription 
 {
     
-    margin-top: 140px;
+    margin-top: 160px;
      margin-left: 500px;  
     margin-right: 500px; 
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     background-color: cadetblue; 
     padding-left: 30px; 
     padding-right: 30px; 
@@ -51,14 +51,22 @@ width: 650px;
 
 #echec 
 {
+
+    position: absolute;
     background-color: whitesmoke;
     border: solid 2px darkcyan;
     text-align: center;
-    margin-left: 550px; 
-    margin-right: 550px;
-     padding-bottom: 30px; 
-    padding-top: 30px;
-    margin-bottom: 75px;
+    margin-right: 300px;
+    margin-left: 300px; 
+    padding-bottom: 10px; 
+    padding-top: 10px; 
+    top : 150px; 
+     
+    left: 300px; 
+   
+   
+  
+    
 }
 
 #inscr

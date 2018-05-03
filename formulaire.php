@@ -13,7 +13,7 @@
   
 <div id="haut"> 
         <nav id="logo"> <img src="logoecenv.png" width="170px" height="40px" /> </nav>
-        <div id="bienvenue"> Bienvenue sur ExCEpert Network </div>   
+        <div id="bienvenue"> Bienvenue sur ECExPERT Network </div>   
 </div>
     
 <!-- Connexion--> 
@@ -26,6 +26,7 @@
     
             <input type="submit" value="Se connecter" />
        </form>
+   
 </div>  
         <?php 
         //on verifie que l utilisateur a bien entrer un pseudo et un mot de passe
@@ -67,7 +68,9 @@
                     }
                     else
                     {
-                        echo '<script>alert("Vous avez rempli un mauvais mot de passe ou un mauvais pseudo");</script>';
+                        echo'<div id="echec">';
+                        echo 'Mot de passe ou pseudo incorrect';
+                        echo '</div>';
                         //echo '<div id="echec"> Vous avez rempli un mauvais mot de passe ou un mauvais email</div>'; 
                         // ici reprendre le css pour que ca s affiche bien mais on affiche un encart pour dire echec connexion
                     }
@@ -100,20 +103,20 @@
     <br/>
     <label for="mail">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;E-mail : </label><input name="mail" type="text" id="mail" size="30" placeholder="Ex : jean-pierre.segado@edu.ece.fr"/><br/>
     <br/>
-    <label for="pass">Mot de passe : </label><input type="password" name="pass" id="pass" size="30"/><br/>
-    <br/>
-    <label for="tel">Numéro de telephone :  </label><input type="text" name="tel" id="tel" size="30"/><br/>
-    <label for="age">Age :   </label><input type="number" name="age" id="age" /><br/>
+    <label for="pass">Mot de passe : </label><input type="password" name="pass" id="pass" size="30"/><br/><br/>
+    
+    <label for="tel">&nbsp; &nbsp;&nbsp;Telephone :  </label>  <input type="text" name="tel" id="tel" size="30" placeholder="Ex : 0606100000"/><br/><br/>
+    <label for="age">&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Age :   </label>     <input type="number" name="age" id="age" /><br/><br/>
     <label for="sexe">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Sexe : </label>
     <select name=sexe id=sexe>
         <option value="homme">Homme</option>
         <option value="femme">Femme</option>
         <option value="Autre">Autre</option>
     </select> 
-    <br/>
+    <br/> <br/>
     
-    <input type="submit" value="S'inscrire" />
-    <input type="reset">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="S'inscrire" />
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Effacer">
     
 </form>
     </div>
@@ -144,12 +147,15 @@
                     }
             // On ajoute une entrée dans la table user
             $bdd_inscription->exec('INSERT INTO user (id_user,name_user, prenom_user, pseudo_user, password_user, tel_user, age_user,photo_user,sexe_user,mail_user,current_status_user,bio_user) VALUES(2,\'cordonier\', \'Patrick\', \'pat\',\'yo\', 0660912718, 22 ,1,\'male\',\'wahou@hotmailfr \',\'raaa\',\'jpp\')');
-
+            echo '<div id="echec">';
             echo '<strong>L\'utilisateur a bien été ajouté !, vous pouvez maintenant vous connecter<strong>';
+            echo'</div>';
         }
         else
         {
-            echo '<script>alert("Vous n\'avez pas rempli tout les champs du formulaire, recommencez svp");</script>';
+            echo '<div id="echec">';
+            echo 'Tous les champs sont obligatoires';
+            echo '</div>';
             // ici reprendre le css pour que ca s affiche bien mais on affiche un encart pour dire echec connexion
         }
        

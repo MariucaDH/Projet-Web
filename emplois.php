@@ -21,7 +21,7 @@ session_start();
         <div id="bouton"> <a href="messagerie.html"> Messagerie </a></div>
         <div id="bouton">  <a href="notifications.html"> Notifications</a> </div>
         <div id="bouton">Emplois</div>
-        <div id="boutondeco" > <a href="formulaire.html"> Deconnexion </a></div>
+        <div id="boutondeco" > <a href="formulaire.php"> Deconnexion </a></div>
     </nav>
                 
         <center> 
