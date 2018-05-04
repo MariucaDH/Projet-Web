@@ -1,4 +1,5 @@
-body {
+body 
+{
     background-image: url(fondco.png);
     font-family: sans-serif; 
     letter-spacing: 1px; 
@@ -75,21 +76,16 @@ width: 700px;
 
 #inscription 
 {
-    
     margin-top: 50px;
-     margin-left: 500px;  
+    margin-left: 500px;  
     margin-right: 500px; 
     margin-bottom: 50px;
     background-color: cadetblue; 
     padding-left: 30px; 
     padding-right: 30px; 
     padding-bottom: 50px; 
-    padding-top: 30px;
-       
-    border: solid darkcyan; 
-     
-   
-    
+    padding-top: 30px;   
+    border: solid darkcyan;   
 }
 
 
@@ -130,5 +126,5 @@ footer
     font-size: 13px;
     text-align: center;
     padding-bottom: 20px; 
-background-color: white
+    background-color: white
 }

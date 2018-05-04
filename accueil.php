@@ -17,11 +17,11 @@ session_start();
             <div class ="bienvenue"></div>
             <!-- DIV DES BOUTONS --> 
             <div id ="bouton"> Accueil</div>
-            <div id="bouton">  <a href="reseau.html">Réseau</a> </div>
-            <div id="bouton">  <a href="profil.html">Mon profil </a></div>
-            <div id="bouton"> <a href="messagerie.html"> Messagerie </a></div>
-            <div id="bouton">  <a href="notifications.html"> Notifications</a> </div>
-            <div id="bouton"> <a href="emplois.html">Emplois </a> </div>  
+            <div id="bouton">  <a href="reseau.php">Réseau</a> </div>
+            <div id="bouton">  <a href="profil.php">Mon profil </a></div>
+            <div id="bouton"> <a href="messagerie.php"> Messagerie </a></div>
+            <div id="bouton">  <a href="notifications.php"> Notifications</a> </div>
+            <div id="bouton"> <a href="emplois.php">Emplois </a> </div>  
             <div id="boutondeco" > <a href="formulaire.php"> Deconnexion </a></div>
         </nav>
     
