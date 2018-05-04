@@ -100,17 +100,19 @@ echo '<div id="infosperso">';
                             die('Erreur : '.$e->getMessage());
                     }
             //on selectionne le user correspondant a l email
-                    $reponse = $bdd->query('SELECT * FROM experience WHERE type_exp=\'formation\' AND id_user =\''.$_SESSION['id_user'].'\' ORDER BY \'date_exp\'');
+                    $reponse = $bdd->query('SELECT * FROM experience WHERE type_exp=\'formation\' AND id_user =\''.$_SESSION['id_user'].'\' ORDER BY \'date_exp_begin\'');
                
 echo '<div id="contenuf">';
         while($donnees = $reponse->fetch())
             //on verifie que le mot de passe correspond 
             
         {
-           echo '<br/> Structure : '.$donnees['structure_exp'].'<br/>';
-            echo 'Description : '. $donnees['description_exp'].'<br/>';  
-            echo 'Date de début : '.$donnees['date_exp_begin'].'<br/>'; 
-            echo 'Date de fin : '.$donnees['date_exp_end'].'<br/>'; 
+            echo '<p>';
+            echo '<strong> Structure : </strong>'.$donnees['structure_exp'].'<br/>';
+            echo '<strong>Description : </strong>'. $donnees['description_exp'].'<br/>';  
+            echo '<strong>Date de début </strong>: '.$donnees['date_exp_begin'].'<br/>'; 
+            echo '<strong>Date de fin : </strong>'.$donnees['date_exp_end'].'<br/>'; 
+            echo '</p>';
         }
           echo '</div>';         
        
@@ -151,10 +153,12 @@ echo '<div id="contenue">';
             //on verifie que le mot de passe correspond 
             
         {
-            echo 'Structure : '.$donnees['structure_exp'].'<br/>';
-            echo 'Description : '. $donnees['description_exp'].'<br/>';  
-            echo 'Date de début : '.$donnees['date_exp_begin'].'<br/>'; 
-            echo 'Date de fin : '.$donnees['date_exp_end'].'<br/>'; 
+            echo '<p>';
+            echo '<strong>Structure : </strong>'.$donnees['structure_exp'].'<br/>';
+            echo '<strong>Description : </strong>'. $donnees['description_exp'].'<br/>';  
+            echo '<strong>Date de début </strong>: '.$donnees['date_exp_begin'].'<br/>'; 
+            echo '<strong>Date de fin : </strong>'.$donnees['date_exp_end'].'<br/>'; 
+            echo '</p>';
         }
           echo '</div>';         
      
