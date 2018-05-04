@@ -96,10 +96,10 @@ $reponse = $bdd_connexion->query('SELECT id_user1, id_user2, name_user,prenom_us
     {
     echo '<p><strong>'.$donnees['prenom_user'].' '.$donnees['name_user'].'</strong><br>';
     echo $donnees['tel_user'].' ans</br>';
-    echo $donnees['age_user'].'</br>';
-    echo $donnees['mail_user'].'</br>';
-    echo 'Actuellement chez :'.$donnees['current_status_user'].'</br>';
-    echo 'Bio :'.$donnees['bio_user'].'</br></p>';
+    echo '<strong> Numéro de téléphone : </strong> '.$donnees['age_user'].'</br>';
+    echo '<strong> Mail : </strong>'. $donnees['mail_user'].'</br>';
+    echo '<strong> Actuellement chez :</strong>'.$donnees['current_status_user'].'</br>';
+    echo '<strong> Bio :</strong>'.$donnees['bio_user'].'</br></p>';
     }
         
 ?>
