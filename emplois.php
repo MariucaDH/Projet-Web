@@ -46,12 +46,12 @@ die('Erreur : '.$e->getMessage());
     <nav id="colonnes">
                         
         <div id="job"> 
-            <a> <span style="color:#008080;"> <br> JOB <br> ___________________________________ </span> </a> <br>
+            <a> <span style="color:#2F4F4F;"> <br> <strong>Job </strong> <br> ___________________________________ </span> </a> <br>
                 <?php
                     $reponse = $bdd_connexion->query('SELECT * FROM joboffer WHERE type_job=\'JOB\' ORDER BY date_publication');
                     while($donnees = $reponse->fetch())
                     {
-                    echo '<strong> <br> '.$donnees['entreprise_job'];
+                    echo '<strong> <br> <span style="color:#2F4F4F;"> '.$donnees['entreprise_job'];
                     echo '<strong> <br> Date Embauche : '.$donnees['date_embauche'];
                     echo '<strong> <br> Date de publication : '.$donnees['date_publication'];
                     echo '<strong> <br>'.$donnees['description_job'];
@@ -65,13 +65,13 @@ die('Erreur : '.$e->getMessage());
 
         
         <div id="stage"> 
-            <a> <span style="color:#008080;"> <br> Stage <br> ___________________________________ </span> </a> <br>
+            <a> <span style="color:#BC8F8F;"> <br> Stage <br> ___________________________________ </span> </a> <br>
   
                 <?php
                     $reponse = $bdd_connexion->query('SELECT * FROM joboffer WHERE type_job=\'STAGE\' ORDER BY date_publication');
                     while($donnees = $reponse->fetch())
                     {
-                    echo '<strong> <br> '.$donnees['entreprise_job'];
+                    echo '<strong> <br> <span style="color:#BC8F8F;">'.$donnees['entreprise_job'];
                     echo '<strong> <br> Date Embauche : '.$donnees['date_embauche'];
                     echo '<strong> <br> Date de publication : '.$donnees['date_publication'];
                     echo '<strong> <br>'.$donnees['description_job'];
