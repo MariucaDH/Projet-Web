@@ -61,6 +61,7 @@
                         $_SESSION['sexe_user'] = $donnees['sexe_user'];
                         $_SESSION['mail_user'] = $donnees['mail_user'];
                         $_SESSION['current_status_user'] = $donnees['current_status_user'];
+                        $_SESSION['bio_user'] = $donnees['bio_user'];
 
                         header('Location: accueil.php');
 

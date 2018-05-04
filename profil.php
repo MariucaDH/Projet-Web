@@ -38,13 +38,13 @@
 	<nav id="infosperso">
         <!-- Inserer la description de la bdd --> 
         <ul>
-			<li>Nom</li>
-			<li>Prenom</li>
-            <li>Age</li>
-			<li>Telephone</li>
-			<li>Email</li>
-			<li>bio</li>
-			<li>Current status</li>
+			<li>Nom: <?php echo '<strong>'.$_SESSION['name_user'].'</strong>'; ?> </li>
+            <li>Prenom: <?php echo '<strong>'.$_SESSION['prenom_user'].'</strong>'; ?> </li>
+            <li>Age: <?php echo '<strong>'.$_SESSION['age_user'].'</strong>'; ?></li>
+            <li>Telephone: <?php echo '<strong>'.$_SESSION['tel_user'].'</strong>'; ?></li>
+            <li>Email: <?php echo '<strong>'.$_SESSION['mail_user'].'</strong>'; ?></li>
+            <li>bio: <?php echo '<strong>'.$_SESSION['bio_user'].'/</strong>'; ?></li>
+            <li>Current status: <?php echo '<strong>'.$_SESSION['current_status_user'].'</strong>'; ?> </li>
 		</ul>
 	</nav>
     
