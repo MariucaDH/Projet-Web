@@ -146,7 +146,7 @@
                             die('Erreur : '.$e->getMessage());
                     }
             // On ajoute une entrée dans la table user
-            $bdd_inscription->exec('INSERT INTO user (id_user,name_user, prenom_user, pseudo_user, password_user, tel_user, age_user,photo_user,sexe_user,mail_user,current_status_user,bio_user) VALUES(2,\'cordonier\', \'Patrick\', \'pat\',\'yo\', 0660912718, 22 ,1,\'male\',\'wahou@hotmailfr \',\'raaa\',\'jpp\')');
+            $bdd_inscription->exec('INSERT INTO user (name_user, prenom_user, pseudo_user, password_user, tel_user, age_user,photo_user,sexe_user,mail_user,current_status_user,bio_user) VALUES(\''.$_POST['nom'].'\', \''.$_POST['prenom'].'\', \''.$_POST['pseudo'].'\',\''.$_POST['pass'].'\','.$_POST['age'].', '.$_POST['tel'].' ,1,\''.$_POST['sexe'].'\',\''.$_POST['mail'].' \',\'\',\'\')');
             echo '<div id="echec2">';
             echo 'Données correctes. Vous pouvez vous connecter';
             echo'</div>';
