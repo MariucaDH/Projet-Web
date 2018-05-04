@@ -62,6 +62,8 @@
                         $_SESSION['mail_user'] = $donnees['mail_user'];
                         $_SESSION['current_status_user'] = $donnees['current_status_user'];
                         $_SESSION['bio_user'] = $donnees['bio_user'];
+                        $_SESSION['photo_user'] = $donnees['photo_user'];
+
 
                         header('Location: accueil.php');
 
@@ -115,9 +117,12 @@
         <option value="Autre">Autre</option>
     </select> 
     <br/> <br/>
+
+    <label for="pic">&nbsp; &nbsp;&nbsp;Choisir une photo de profil:  </label>  <input type="file" name="profil_pic" id="profil_pic" ></br></br>
+
     
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="S'inscrire" />
-    &nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Effacer">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p><input type="submit" value="S'inscrire" />
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Effacer"></p>
     
 </form>
     </div>
