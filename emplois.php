@@ -26,7 +26,8 @@
         <div id="boutondeco" > <a href="formulaire.php"> Deconnexion </a></div>
     </nav>
                 
-       <div id="titre">Plateforme de recherche d'emplois</div>
+       <div id="titre"> Plateforme d'offres d'emplois <br>
+           Powered by <span style="color:#008080;">  ECExPERTS </span> </div>
                
 <?php
 try
@@ -45,18 +46,18 @@ die('Erreur : '.$e->getMessage());
     <nav id="colonnes">
                         
         <div id="job"> 
-            <a> Job</a> <br>
+            <a> <span style="color:#008080;"> <br> Job <br> ___________________________________ </span> </a> <br>
                 <?php
                     $reponse = $bdd_connexion->query('SELECT * FROM joboffer WHERE type_job=\'JOB\' ORDER BY date_publication');
                     while($donnees = $reponse->fetch())
                     {
                     echo '<strong> <br> '.$donnees['entreprise_job'];
-                    echo '<strong> <br>'.$donnees['type_job'];
-                    echo '<strong> <br>'.$donnees['date_embauche'];
-                    echo '<strong> <br>'.$donnees['date_publication'];
+                    echo '<strong> <br> Date Embauche : '.$donnees['date_embauche'];
+                    echo '<strong> <br> Date de publication : '.$donnees['date_publication'];
                     echo '<strong> <br>'.$donnees['description_job'];
-                    echo '<strong><br>'.$donnees['contact_job'];
-                        echo '</p>';
+                    echo '<strong> <br>'.$donnees['contact_job'];
+                    echo '</p>';
+                    echo '___________________________________ <br>';
                     }
                 ?>
         </div>
@@ -64,37 +65,37 @@ die('Erreur : '.$e->getMessage());
 
         
         <div id="stage"> 
-            <a> Stage </a> <br>
+            <a> <span style="color:#008080;"> <br> Stage <br> ___________________________________ </span> </a> <br>
   
                 <?php
                     $reponse = $bdd_connexion->query('SELECT * FROM joboffer WHERE type_job=\'STAGE\' ORDER BY date_publication');
                     while($donnees = $reponse->fetch())
                     {
                     echo '<strong> <br> '.$donnees['entreprise_job'];
-                    echo '<strong> <br>'.$donnees['type_job'];
-                    echo '<strong> <br>'.$donnees['date_embauche'];
-                    echo '<strong> <br>'.$donnees['date_publication'];
+                    echo '<strong> <br> Date Embauche : '.$donnees['date_embauche'];
+                    echo '<strong> <br> Date de publication : '.$donnees['date_publication'];
                     echo '<strong> <br>'.$donnees['description_job'];
                     echo '<strong><br>'.$donnees['contact_job'];
-                        echo '</p>';
+                    echo '</p>';
+                    echo '___________________________________ <br>';
                     }
                 ?>
         </div>
         
         <div id="alternance"> 
         
-        <a> Alternances </a> <br>
+        <a>  <span style="color:#4169E1;"> <br> Alternance <br> ___________________________________ </span> </a> <br>
                 <?php
                     $reponse = $bdd_connexion->query('SELECT * FROM joboffer WHERE type_job=\'ALTERNANCE\' ORDER BY date_publication');
                     while($donnees = $reponse->fetch())
                     {
-                    echo '<strong> <br> '.$donnees['entreprise_job'];
-                    echo '<strong> <br>'.$donnees['type_job'];
-                    echo '<strong> <br>'.$donnees['date_embauche'];
-                    echo '<strong> <br>'.$donnees['date_publication'];
+                    echo '<strong> <br><span style="color:#4169E1;"> '.$donnees['entreprise_job'];
+                    echo '<strong> <br> Date Embauche : '.$donnees['date_embauche'];
+                    echo '<strong> <br> Date de publication : '.$donnees['date_publication'];
                     echo '<strong> <br>'.$donnees['description_job'];
                     echo '<strong><br>'.$donnees['contact_job'];
-                        echo '</p>';
+                    echo '</p>';
+                    echo '___________________________________ <br>';
                     }
                 ?>
         </div>

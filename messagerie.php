@@ -8,6 +8,8 @@ session_start();
         <link rel="stylesheet" href="style.css" />
     </head>
         
+<div id="titre"> <span style="color:#008080;"> ECExPerts </span> </div>
+        
          //Menu
             <body>
     <nav id = "boutons"> 
