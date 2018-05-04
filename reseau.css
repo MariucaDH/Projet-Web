@@ -11,6 +11,26 @@
     letter-spacing: 1px; 
     line-height: 40px;
     text-decoration: none; 
-    margin-top: 350px; 
+    margin-top: 150px; 
        
+}
+
+#titrepage
+{
+     font-family: "Arial Black";
+     margin-top: 5px; 
+     margin-left: 90px; 
+     text-align: center;
+     font-size: 16px;
+}
+
+#ajouterami
+{
+     margin-left: 200px; 
+}
+
+
+#afficheramis
+{
+     margin-left: 200px; 
 }
