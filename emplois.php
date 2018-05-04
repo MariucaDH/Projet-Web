@@ -46,7 +46,7 @@ die('Erreur : '.$e->getMessage());
     <nav id="colonnes">
                         
         <div id="job"> 
-            <a> <span style="color:#008080;"> <br> Job <br> ___________________________________ </span> </a> <br>
+            <a> <span style="color:#008080;"> <br> JOB <br> ___________________________________ </span> </a> <br>
                 <?php
                     $reponse = $bdd_connexion->query('SELECT * FROM joboffer WHERE type_job=\'JOB\' ORDER BY date_publication');
                     while($donnees = $reponse->fetch())
