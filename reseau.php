@@ -5,7 +5,8 @@
     <head>
         <meta charset="utf-8" />
         <title>Votre réseau</title>
-        <link rel="stylesheet" href="style.css" /><link rel="stylesheet" href="reseau.css" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="reseau.css" />
     </head>
         
 
@@ -26,13 +27,14 @@
     </nav>
                 
                 
-    <div id="titrepage"> Liste de vos amis </div>
+    <div id="titrepage"> Liste de vos amis </div> <br> <br>
 
-    <div id="ajouter un ami">
+    <div id="ajouterami"> Ajouter un ami :
         <form  action="reseau.php" method="GET">
-            <label for="email_friend">Email de l'ami :  </label><input name="email_friend" type="text" id="email_friend" /> &nbsp;
-            <input type="submit" value="ajouter un ami" />
+            <label for="email_friend">Email </label><input name="email_friend" type="text" id="email_friend" /> &nbsp;
+            <input type="submit" value="Ajouter" />
         </form>
+        
     <?php 
         //on verifie que l utilisateur a bien entrer email
         if(empty($_GET['email_friend'])) $_GET['email_friend'] = NULL;
@@ -56,56 +58,51 @@
                     $donnees_recherche = $reponse_recherche->fetch();
                     if(empty($donnees_recherche['mail_user']))
                         {
-                            echo 'l\'utilisateur n\'éxiste pas, réessayez svp.';
+                            echo 'L\'utilisateur n\'existe pas, veuillez réessayer.';
                         }
                     else
                     {
                     // si il existe  on lui insert l ami dans la table ami.
                     $bdd_recherche->exec('INSERT INTO friend (id_user1, id_user2,notif_friend) VALUES('.$_SESSION['id_user'].','.$donnees_recherche['id_user'].' , NOW())');
-                    echo '<strong>Le contact a bien été ajouté</strong>';
+                    echo '<strong> <br> <span style="color:#8033FF"> Le contact a bien été ajouté.</strong>';
                     }
                     $reponse_recherche->closeCursor();
         }
 
     ?>
+        
 
     </div>
 
-
-
-    <div id="afficher vos amis">
-
-    
-
-
+    <div id="afficheramis">
 <?php
 // ici on va aficher les amis dans la div
 
-   try
-                    {
-                        // On se connecte à MySQL
-                        $bdd_connexion = new PDO('mysql:host=localhost;dbname=excepert;charset=utf8', 'root','root');
-                    }
-                    catch(Exception $e)
-                    {
-                        // En cas d'erreur, on affiche un message et on arrête tout
-                            die('Erreur : '.$e->getMessage());
-                    }
-            //on selectionne le user correspondant a l email
-                   $reponse = $bdd_connexion->query('SELECT id_user1, id_user2, name_user,prenom_user,tel_user,age_user,mail_user,current_status_user,bio_user FROM friend INNER JOIN user ON user.id_user = friend.id_user2 WHERE friend.id_user1 ='.$_SESSION['id_user']);
+        try
+            {
+            // On se connecte à MySQL
+            $bdd_connexion = new PDO('mysql:host=localhost;dbname=excepert;charset=utf8', 'root','root');
+            }
+        catch(Exception $e)
+            {
+             // En cas d'erreur, on affiche un message et on arrête tout
+             die('Erreur : '.$e->getMessage());
+            }
+        
+//On selectionne le user correspondant a l'email
+$reponse = $bdd_connexion->query('SELECT id_user1, id_user2, name_user,prenom_user,tel_user,age_user,mail_user,current_status_user,bio_user FROM friend INNER JOIN user ON user.id_user = friend.id_user2 WHERE friend.id_user1 ='.$_SESSION['id_user']);
+        
   while($donnees = $reponse->fetch())
-  {
-  echo '<p><strong>'.$donnees['name_user'].'</strong></br>';
-  echo '<strong>'.$donnees['prenom_user'].'</strong></br>';
-  echo $donnees['tel_user'].'</br>';
-  echo $donnees['age_user'].' ans</br>';
-  echo $donnees['mail_user'].'</br>';
-  echo 'Actuellement chez:'.$donnees['current_status_user'].'</br>';
-  echo 'bio:'.$donnees['bio_user'].'</br></p>';
-  }
+    {
+    echo '<p><strong>'.$donnees['prenom_user'].' '.$donnees['name_user'].'</strong><br>';
+    echo $donnees['tel_user'].' ans</br>';
+    echo '<strong> Numéro de téléphone : </strong> '.$donnees['age_user'].'</br>';
+    echo '<strong> Mail : </strong>'. $donnees['mail_user'].'</br>';
+    echo '<strong> Actuellement chez :</strong>'.$donnees['current_status_user'].'</br>';
+    echo '<strong> Bio :</strong>'.$donnees['bio_user'].'</br></p>';
+    }
+        
 ?>
-            
-                
       </div>        
-            </body>
+      </body>
 </html>
