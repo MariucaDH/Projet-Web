@@ -5,67 +5,42 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <div class="publication"> 
-        <div id="boutonpartage" > <a> Publier du contenu </a></div>
-                <fieldset>
-	               
-                       <form method="post" action="accueil.php" enctype="multipart/form-data">
-	               <label for="titre">Titre :</label><input name="titre" type="text" id="titre"/><br/>
-                 <label for="descr"> Description : </label><input name="descr" type="text" id="descr"/> <br/>
-                   <label for="file">Ajouter un media :</label><input type="file" name="file" id="file"/><br/>
-                     
-                   <label for="humeur">Feeling :</label><input name="humeur" type="text" id="humeur"/>
-                   <label for="bouton"><a><input type="submit" value="Publier" /></a> </label> 
-	              </form>
-                           
-        
-	            </fieldset>
-         
-    </div> 
+     <div id="ajouter">
+        <a> Vous souhaitez ajouter un élément à votre CV ? </a>
+        <br/><br/>
+    <form method="post" action="test.php">
+            <label for="struct">Structure :  </label><input name="struct" type="text" id="struct" /> &nbsp;<br/>
+            <label for="type">Type : </label>
+                    <select name=type id=type>
+                            <option value="formation">Formation</option>
+                            <option value="experience">Experience</option>
+                    </select> 
+            <label for="date">Date de début :  </label><input name="dated" type="date" id="date" /> &nbsp;<br/>
+            <label for="date">Date de fin :  </label><input name="datef" type="date" id="date" /> &nbsp;<br/>
+            <label for="description">Description : </label><input type="text" name="description" id="description" /><br/>
     
-     <?php
-  
-   /*       try
-                    {
-                        // On se connecte à MySQL
-                        $bdd = new PDO('mysql:host=localhost;dbname=excepert;charset=utf8', 'root','root');
-                    }
-        catch(Exception $e)
-                    {
-                        // En cas d'erreur, on affiche un message et on arrête tout
-                            die('Erreur : '.$e->getMessage());
-                    }
-            //on selectionne le user correspondant a l email
-                    $reponse = $bdd->query('SELECT * FROM post ORDER BY \'date_post\'');
-               
-echo '<div id="post">';
-        while($donnees = $reponse->fetch())
-            //on verifie que le mot de passe correspond 
+	        <input type="submit" value="Ajouter un élément au CV" />
+    </form>
     
+</div>
+   
+    <?php 
+
+        //on verifie que l'utilisateur a bien entré les differentes entrées du formulaires
+        if(empty($_POST['struct'])) $_POST['struct'] = NULL;
+        if(empty($_POST['type'])) $_POST['type '] = NULL;
+        if(empty($_POST['description'])) $_POST['description'] = NULL;
+        if(empty($_POST['dated'])) $_POST['dated'] = NULL;
+        if(empty($_POST['datef'])) $_POST['datef'] = NULL;  
+   
+     if(isset($_POST['struct']) AND isset($_POST['description']) AND isset($_POST['dated']) AND isset($_POST['datef']) )
+           
         {
-            echo '<br/> Titre : '.$donnees['titre_post'].'<br/>';
-            echo 'Description : '. $donnees['content_post'].'<br/>';  
-            echo 'Date : '.$donnees['date_post'].'<br/>'; 
-            echo 'Humeur : '.$donnees['mood_post'].'<br/>'; 
-            echo '<img src="'.$donnees['file_post'].'" />';
-        }
-               
-    echo '</div>';*/
-        
-        ?>
-          
-        
-           <?php
-       if(empty($_POST['titre'])) $_POST['titre'] = NULL;
-        if(empty($_POST['humeur'])) $_POST['humeur'] = NULL;
-        if(empty($_POST['descr'])) $_POST['descr'] = NULL;
-       if(empty($_POST['file'])) $_POST['file'] = NULL;
-        
-        
-     if(isset($_POST['titre']) AND isset($_POST['descr']))
-     {   //on ouvre la bdd en verifiant son ouverture
+
+            //on ouvre la bdd en verifiant son ouverture
                                 try
                     {
+           echo 'coucou';
                                   
                         // On se connecte à MySQL
                         $bdd_inscription = new PDO('mysql:host=localhost;dbname=excepert;charset=utf8', 'root','root');
@@ -76,12 +51,12 @@ echo '<div id="post">';
                             die('Erreur : '.$e->getMessage());
                     }
             // On ajoute une entrée dans la table user
-            $bdd_inscription->exec('INSERT INTO post (id_user, date_post, content_post, mood_post, file_post, titre_post) VALUES(1,NOW(), \''.$_POST['descr'].'\', \''.$_POST['humeur'].'\',\''.$_FILES['file']['name'].'\',\''.$_POST['titre'].'\')');
-           
-            echo 'C bon';
-          
+            $bdd_inscription->exec('INSERT INTO experience (id_user,structure_exp, description_exp, date_exp_begin, type_exp, date_exp_end) VALUES( \''.$_SESSION['id_user'].'\',\''.$_POST['struct'].'\',\''.$_POST['description'].'\',\''.$_POST['dated'].'\', \''.$_POST['type'].'\', \''.$_POST['datef'].'\' )');
+
+            echo 'yesss';
         }
-        ?>
-    </body>
     
+      ?>
+</body>
+      
 </html>

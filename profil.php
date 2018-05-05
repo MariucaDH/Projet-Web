@@ -32,7 +32,8 @@
 
     <div id="imgperso">
             <!-- Inserer photo du profil de la bdd --> 
-	       <img class="moi" src="identite.png" alt="moi" width="100px" height="100px">
+	     <?php   echo '<img src="'.$_SESSION['photo_user'].'" />';  ?> 
+     
     </div>
     <!-- INFOS PERSONNELLES -->
 	<nav id="infosperso">
@@ -205,11 +206,7 @@ echo '<div id="contenue">';
      if(isset($_POST['struct']) AND isset($_POST['description']) AND isset($_POST['dated']) AND isset($_POST['datef']) )
            
         {
-       //$sx=  $_POST['type '];
-              $s = $_POST['struct'];
-          $d = $_POST['description']; 
-        $dd= $_POST['dated'];
-          $df=   $_POST['datef'];
+
             //on ouvre la bdd en verifiant son ouverture
                                 try
                     {
@@ -224,11 +221,11 @@ echo '<div id="contenue">';
                             die('Erreur : '.$e->getMessage());
                     }
             // On ajoute une entrée dans la table user
-            $bdd_inscription->exec('INSERT INTO experience (id_user,structure_exp, description_exp, date_exp_begin, type_exp, date_exp_end,id_exp) VALUES(1,\'eeeeee\',\'cccccc\',2018-01-02, \'formation\', 2018-01-01, 3 )');
+            $bdd_inscription->exec('INSERT INTO experience (id_user,structure_exp, description_exp, date_exp_begin, type_exp, date_exp_end) VALUES( \''.$_SESSION['id_user'].'\',\''.$_POST['struct'].'\',\''.$_POST['description'].'\',\''.$_POST['dated'].'\', \''.$_POST['type'].'\', \''.$_POST['datef'].'\' )');
 
             echo 'yesss';
         }
-     
+    
       ?>
 </body>
       
