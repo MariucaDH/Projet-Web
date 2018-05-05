@@ -33,9 +33,11 @@
         <div id="messageaccueil">Votre fil d'actualité :</div>
        <br><br><br>
         <div id="postparpersonne">  
-              <div id="photo"> <img src ="identite.png" class="imgpublication" width = "100px" height = "100px"/><br> photo du user</div>
-                <div id="post">News 1</div> 
-                    <?php
+              <div id="photo">  </div>
+                <div id="post"></div> 
+                    
+            
+            <?php
   
           try
                     {
@@ -50,19 +52,29 @@
             //on selectionne le user correspondant a l email
                     $reponse = $bdd->query('SELECT * FROM post ORDER BY \'date_post\' DESC');
                
-echo '<div id="post">';
+
         while($donnees = $reponse->fetch())
             //on verifie que le mot de passe correspond 
     
         {
+             echo '<div id="photo">'; 
+             echo '<img src="'.$_SESSION['photo_user'].'" />'; 
+          echo '</div>'; 
+            
+            echo '<div id="post">';
             echo '<br/> Titre : '.$donnees['titre_post'].'<br/>';
             echo 'Description : '. $donnees['content_post'].'<br/>';  
             echo 'Date : '.$donnees['date_post'].'<br/>'; 
             echo 'Humeur : '.$donnees['mood_post'].'<br/>'; 
           echo '<img src="'.$donnees['file_post'].'" />';
+            echo '</div>';
+            
+            
+            
+           
         }
                
-    echo '</div>';
+    
         
         ?>
           

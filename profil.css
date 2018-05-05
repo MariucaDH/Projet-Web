@@ -4,17 +4,29 @@
     position: relative;
     margin-left: 220px;
 }
+
+#profil 
+{
+    width 1000px; 
+    margin-top: 20px; 
+}
 #infosperso 
 {
-    
-    margin-left: 300px; 
-    width: 400px;
-    background-color: azure;
+
+    margin-left: 200px; 
+    width: 450px;
+    background-color: lightblue;
     padding-top: 10px;
-    padding-bottom: 10px; 
+    padding-bottom: 10px;
+    height: 160px; 
+    margin-top: 3Opx; 
     
 }
 
+#formation 
+{
+    width: 600px; 
+}
 #imgperso
 {
     float: left;
@@ -23,33 +35,65 @@
     
 }
 
+.liste 
+{
+    list-style: circle;
+}
 #exp
 {
-    
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    background-color: aliceblue; 
+  float: left; 
+    border: solid 1px darkcyan;
+}
+
+
+#expprof
+{
+    width : 600px; 
 }
 
 #ajouter 
 {
-    position: fixed; 
-    bottom: 40px;
+    margin-top: 100px; 
+    
+
   text-align: center; 
     padding-top: 30px; 
-    margin-left: 875px; 
+    margin-left: 950px; 
     margin-right: 30px;  
-   background-color: lightblue; 
-    padding-bottom: 30px; 
+padding : 20px; 
+   background-color: ghostwhite; 
+    
+    border: solid 1px darkcyan; 
+    
+}
+
+#modif 
+{
+    padding: 10px;
+    float: right;
+    bottom: 40px;
+  text-align: center; 
+    margin-right: 30px;  
+    margin-top: 3Opx; 
+   background-color: ghostwhite; 
     border: solid 1px darkcyan; 
     
 }
 
 #contenuf
 {
-    padding-top: 10px; 
-    padding-left: 20px;
+    padding: 2Opx;  
+    padding-left: 20px; 
+    padding-right: 20px; 
     height: 150px; 
     overflow:auto; 
-    background-color: whitesmoke;
-    margin-right: 30px;
+    background-color: white;
+   
     
 }
 #nom  
@@ -60,10 +104,11 @@
 
 #contenue
 {
-     margin-right: 30px;
-     padding-top: 10px; 
+     
+padding: 2Opx;  
     padding-left: 20px; 
+    padding-right: 20px; 
     height: 150px; 
     overflow: auto; 
-    background-color: whitesmoke;
+    background-color: white;
 }
